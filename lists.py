@@ -46,3 +46,36 @@ for index in range(len(list2)):
 print(vList)
 
 print('Exercise 9')
+l1 = [[2, 4], [2, 2]]
+l2 = [[5, 7], [1, 3]]
+l3 = []
+
+for x in range(len(l1)):
+    row = []
+    for y in range(len(l1[x])):
+        row.append(l1[x][y] + l2[x][y])
+    l3.append(row)
+
+print('Exercise 10')
+l1 = [[2, 4, 100], [2, 2, 200]]
+l2 = [[5, 7, 400], [1, 3, 300]]
+l3 = []
+
+for x in range(len(l1)):
+    row = []
+    for y in range(len(l1[x])):
+        row.append(l1[x][y] + l2[x][y])
+    l3.append(row)
+
+print('Exercise 11')
+
+dupe = [1, 1, 2, 2, 3, 3, 4]
+deDupe = []
+
+for i in dupe:
+    if i not in deDupe:
+      deDupe.append(i)
+    dupe = deDupe
+print(deDupe)
+
+print('Bonus Exercise')
