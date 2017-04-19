@@ -45,3 +45,29 @@ for x in range(square):
     print(rowDisp)
 
 print('E6')
+
+box = input('How big is the box? ')
+box = int(box)
+row = []
+rowCap = []
+for x in range(box):
+    rowCap.append('*')
+for x in range(box):
+    if x == 0:
+        row.append('*')
+    elif x == box - 1:
+        row.append('*')
+    else:
+        row.append(' ')
+
+rowDisp = ''.join(row)
+rowCapDisp = ''.join(rowCap)
+
+print(rowCapDisp)
+
+for x in range(box-2):
+    print(rowDisp)
+
+print(rowCapDisp)
+
+print('E7')
