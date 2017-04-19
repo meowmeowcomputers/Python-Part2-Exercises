@@ -49,3 +49,21 @@ for x in range(len(s)):
         p.insert(x, s[x])
 
 print(''.join(p))
+
+print('E6')
+ide = input('Enter Ceasar cipher here: ')
+ide = ide.upper()
+ide = list(ide)
+out = []
+outTxt = []
+
+for x in range(len(ide)):
+    out.insert(x, ord(ide[x])-13)
+    if out[x] < 65:
+        out[x] = out[x] + 26
+
+for y in range(len(out)):
+    out[y] = chr(out[y])
+
+print(''.join(out))
+#    outTxt.insert(chr(out[y]))
