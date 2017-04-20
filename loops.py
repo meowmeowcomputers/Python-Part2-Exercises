@@ -74,19 +74,67 @@ print('E7')
 # tri = []
 rowNum = 4
 
-for i in range(rowNum+1):
-    space = rowNum - (i + 1)
-    print((' ' * space + ('*' * (i+1))))
+for i in range(1,rowNum*2,2):
+    space = rowNum - int(i/2 +.5)
+    star = i
+    print(' '*space+'*'*star)
 
-#i=1 3 space 1 star rownum is 4, to get 3 spaces rownum - 1
-#i=3 2 space 3 star rownum is 4, to ger 2 spaces rownum - 2
-#i=5 1 space 5 star rownum is 4, to get 1 space rownum - 3
-#i=7 0 space 7 star
+print('E8')
+
+rowNum = input('How many rows do you want the triangle? ')
 
 for i in range(1,rowNum*2,2):
     space = rowNum - int(i/2 +.5)
     star = i
     print(' '*space+'*'*star)
 
-    #i=1 3 space 1 star
-    #i=2 1 space 3 star
+print('E9')
+
+for i in range(1, 11):
+    for j in range(1, 11):
+        a = i*j
+        print('{0} x {1} = {2}'.format(i, j, a))
+
+print('B A N N E R')
+
+msg = input("Please input a message to put in the banner: ")
+banTB = []
+banMid = []
+msg = list(msg)
+
+for i in range(len(msg)+2):
+    banTB.append('*')
+#Opening Star
+banMid.append('*')
+
+for j in range(len(msg)):
+    banMid.append(msg[j])
+
+#Closing Star
+banMid.append('*')
+
+print(''.join(banTB))
+print(''.join(banMid))
+print(''.join(banTB))
+
+print('Triangle Numbers')
+
+uTri = input('Enter the Triangle number sequence you want: ')
+uTri = int(uTri)
+
+def tri(x):
+    return(int(x*(x+1)/2))
+
+tri(uTri)
+
+print('Factors')
+
+def fac(x):
+    for i in range(1, x+1):
+        if x % i == 0:
+            print(i)
+
+uFac = input('Enter the number you want the factors of: ')
+uFac = int(uFac)
+
+fac(uFac)
