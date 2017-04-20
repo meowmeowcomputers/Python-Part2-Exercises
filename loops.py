@@ -71,3 +71,22 @@ for x in range(box-2):
 print(rowCapDisp)
 
 print('E7')
+# tri = []
+rowNum = 4
+
+for i in range(rowNum+1):
+    space = rowNum - (i + 1)
+    print((' ' * space + ('*' * (i+1))))
+
+#i=1 3 space 1 star rownum is 4, to get 3 spaces rownum - 1
+#i=3 2 space 3 star rownum is 4, to ger 2 spaces rownum - 2
+#i=5 1 space 5 star rownum is 4, to get 1 space rownum - 3
+#i=7 0 space 7 star
+
+for i in range(1,rowNum*2,2):
+    space = rowNum - int(i/2 +.5)
+    star = i
+    print(' '*space+'*'*star)
+
+    #i=1 3 space 1 star
+    #i=2 1 space 3 star
