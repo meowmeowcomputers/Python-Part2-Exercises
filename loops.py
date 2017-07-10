@@ -83,11 +83,11 @@ print('E8')
 
 rowNum = input('How many rows do you want the triangle? ')
 rowNum = int(rowNum)
-
-for i in range(1,(rowNum*2)-1,2):
-    space = rowNum - int(i/2 +.5)
-    star = i
-    print(' '*space+'*'*star)
+# 
+# for i in range(1,(rowNum*2)-1,2):
+#     space = rowNum - int(i/2 +.5)
+#     star = i
+#     print(' '*space+'*'*star)
 
 for i in range(0,rowNum*2,2):
     space = rowNum - int(i/2)

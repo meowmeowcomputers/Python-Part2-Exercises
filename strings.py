@@ -34,6 +34,7 @@ for x in range(len(lp)):
 print(''.join(elim))
 
 print('E5')
+#Exercise 5: Increasing letter pairs to five 
 s = input("Enter your string here: ")
 s = list(s)
 p = []
@@ -42,7 +43,7 @@ for x in range(len(s)):
     if s[x:x+1] == s[x+1:x+2]:
         #s.insert(x, s[x])
         #holder = s[x]+s[x]+s[x]+s[x]+s[x]
-        p.insert(x, s[x]+s[x]+s[x]+s[x])
+        p.insert(x, s[x]*4)
         #p.insert(x, holder)
         #s.insert(x, holder+holder+holder+holder+holder)
     else:
@@ -51,19 +52,23 @@ for x in range(len(s)):
 print(''.join(p))
 
 print('E6')
-ide = input('Enter Ceasar cipher here: ')
-ide = ide.upper()
-ide = list(ide)
-out = []
-outTxt = []
+#Exercise 6: Caesar Cipher
+rot = input('How many spaces do you want to rotate by using the Caesar Cipher? ')
 
-for x in range(len(ide)):
-    out.insert(x, ord(ide[x])-13)
-    if out[x] < 65:
-        out[x] = out[x] + 26
+def caesar(rot):
+    ide = input('Enter Ceasar cipher here: ')
+    ide = ide.upper()
+    ide = list(ide)
+    out = []
+    outTxt = []
 
-for y in range(len(out)):
-    out[y] = chr(out[y])
+    for x in range(len(ide)):
+        out.insert(x, ord(ide[x])-rot)
+        if out[x] < 65:
+            out[x] = out[x] + 26
 
-print(''.join(out))
+    for y in range(len(out)):
+        out[y] = chr(out[y])
+
+    print(''.join(out))
 #    outTxt.insert(chr(out[y]))

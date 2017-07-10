@@ -79,3 +79,15 @@ for i in dupe:
 print(deDupe)
 
 print('Bonus Exercise')
+
+#2x2 matrix multiplication
+m1 = [['a', 'b'], ['c' , 'd']]
+m2 = [['e', 'f'], ['g' , 'h']]
+m3 = []
+m4 = []
+
+for x in range(len(m1)):
+    for y in range(len(m1[x])):
+        for z in range(len(m2)):
+            for a in range (len(m2[z])):
+                m3.append(m1[x][y]+m2[z][a])
